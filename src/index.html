@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hw</h1>
+
+    <script>
+        // fetch('/users', {
+        //     method: 'POST',
+        //     headers:{
+        //         'content-type': 'application/json'
+        //     },
+        //     body:JSON.stringify({
+        //         name: 'Biden', 
+        //         age: 74, 
+        //         password:'BidenLand', 
+        //         email:'biden@mail.com'
+        //     })
+        // })
+
+        fetch('/tasks', {
+            method:'POST',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body:JSON.stringify({
+                task:'Finish web dev bootcamp',
+                completed: true
+            })
+        })
+
+        fetch('/',{
+            headers:{
+                'content-type': 'application/json'
+            },
+            body:JSON.stringify({
+                task:'The body',
+                completed: true
+            })
+        })
+    </script>
+</body>
+</html>
