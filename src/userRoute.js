@@ -121,7 +121,7 @@ user_route.post('/users/create', async (req, res)=>{
         email: req.body.email
     })
 
-    welcome_email(req.body.email, req.body.name)
+
 
     const new_token_created = await new_user.create_token()
 

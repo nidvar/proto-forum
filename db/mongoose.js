@@ -5,11 +5,10 @@ const jwt = require('jsonwebtoken');
 const mongodb_url = process.env.MONGODBURL;
 console.log('mongodb url =========================',mongodb_url)
 
-
-
 mongoose.connect(`${mongodb_url}/task-manager-api`,{
     useNewUrlParser:true,
-    useCreateIndex:true
+    useCreateIndex:true,
+    useUnifiedTopology:true
 })
 
 const UserSchema = new mongoose.Schema({
